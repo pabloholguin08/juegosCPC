@@ -2,7 +2,7 @@ let calcular=document.getElementById("calcular");
 calcular.addEventListener("click",verificarRespuesta);
 
 let numeroA=document.getElementById("siguiente");
-numeroA=addEventListener("click",aleatorio)
+numeroA.addEventListener("click",aleatorio)
 
 let gif=document.getElementById("gif");
 
@@ -24,12 +24,21 @@ function verificarRespuesta(){
     }
 }
 
-function numeroAleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
 function aleatorio(){
+
+    let numero1=document.getElementById("numero1");
+    let numero2=document.getElementById("numero2");
+
     numero1.value=numeroAleatorio(1,10);
     numero2.value=numeroAleatorio(1,10);
+
+    function numeroAleatorio(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
 }
+
+
+
+
 
